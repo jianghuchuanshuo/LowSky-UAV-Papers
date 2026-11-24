@@ -2,6 +2,7 @@
 A curated reading list for low-altitude UAV control, recognition, navigation, localization, and multimodal information processing.
 
 ## 开放词汇-无人机-导航/航迹预测/航迹规划
+### 2026：
 ### [1] 1Rao P, Zhang W, Balestriero R, et al. Skyjepa: Learning long-horizon world models for zero-shot sim-to-real control of quadrotors[J]. arXiv preprint arXiv:2606.23444, 2026.（GB/T引用格式）
 SkyJEPA：面向四旋翼无人机零样本 sim-to-real 控制的长时程世界模型学习
 <details>
@@ -25,6 +26,9 @@ SkyJEPA：面向四旋翼无人机零样本 sim-to-real 控制的长时程世界
 
 
 ## 多模态hash检索
+
+
+## 多模态信息融合
 
 
 

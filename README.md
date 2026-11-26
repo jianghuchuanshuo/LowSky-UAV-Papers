@@ -31,6 +31,37 @@ SkyJEPA：面向四旋翼无人机零样本 sim-to-real 控制的长时程世界
     针对单射频或视觉模态易受噪声干扰、鲁棒性不足的缺陷，提出多层 RF-Vision 融合框架 RFViNet，同步提取无人机射频信号的时频特征与图像的空间视觉特征，依靠射频引导候选框生成、射频增强特征调制、射频引导语义查询三大核心模块挖掘跨模态互补性与语义协同性，实现多模态信息深度融合，配套搭建实测平台在复杂场景下开展验证，在真实数据集上达到 85.8% 的 AP₅₀精度，可稳定完成无人机定位与识别任务，提升 6G 无线网络频谱安全防护能力。
 </details>
 
+
+### [2]  A Distance-Aware Vision-RF Multimodal Fusion Framework for Low-Altitude UAV Individual Identification[C]//2026 IEEE International Conference on Pattern Recognition, Machine Vision and Artificial Intelligence (PRMVAI). IEEE, 2026.
+
+一种面向低空无人机个体识别的距离感知视觉-射频多模态融合框架
+
+<details>
+<summary>摘要</summary>
+    单模态无人机识别易受成像退化、电磁干扰、信道变化影响，识别精度与鲁棒性受限。该文面向复杂低空环境，提出距离感知的视觉 - RF 多模态融合无人机个体识别框架，针对不同识别距离设计两套融合网络：针对中远距（目标尺度小、纹理不足）提出 RDDF-Net；针对中距（多模态细粒度信息充足）提出 MTFF-Net。实验表明 RDDF-Net 中远距识别精度 96.40%，MTFF-Net 中距识别精度 96.92%，优于单模态与主流基线方法。<br>
+   <img src="assets/image-20261126212639569.png" alt="image-20261126212639569" style="width:60%;" /><br>
+    主要框架概述：<br>
+    整体为距离感知双分支架构，按距离分流；①RDDF-Net（中远距双模态）：视觉分支提取外观特征、RF 分支提取 I/Q 时域波形特征，采用动态权重机制对分类结果做决策层融合；②MTFF-Net（中距三模态）：输入图像、I/Q 时域信号、STFT 频谱图，通过跨模态特征对齐 + 模态门控注意力完成特征层融合，联合判别。
+</details>
+
+
+
+### [3] DUAN Y S, ZHANG J N, XUE L, et al. RF-IRSynNet: cross-modal radio frequency-infrared fusion for robust UAV recognition[J]. Journal of Systems Engineering and Electronics, 2026, 37(3):.
+
+RF-IRSynNet：用于鲁棒无人机识别的跨模态射频-红外融合
+
+<details>
+<summary>摘要</summary>
+    无人机广泛应用带来空域安全风险，远距离、视觉退化场景下单红外或射频识别存在固有缺陷；现有工作较少联合红外图像与射频信号开展无人机类型识别，两类模态特征异构性强，联合表征困难。该文提出 RF-IRSynNet，融合红外图像与无人机射频发射信号实现分类。红外支路基于 YOLOv11 检测候选目标并提取语义特征；射频支路使用储备池计算编码时频动态特征；采用自适应置信度加权软投票策略融合双模态输出。该框架远距离识别鲁棒性强，小训练样本下仍可保持高识别精度，适用于真实低空监测场景。<br>
+   <img src="assets/image-20261126213049244.png" alt="image-20261126213049244" style="width:67%;" /><br>
+    主要框架概述：<br>
+    双模态独立编码 + 决策层融合架构。红外分支：YOLOv11 检测 + 语义特征提取；RF 分支：储备池计算（Reservoir Computing）建模时频序列；融合模块：自适应置信度软投票，根据模态可靠性动态分配权重输出最终识别结果。
+</details>
+
+
+
+
+
 ## VLA
 
 
